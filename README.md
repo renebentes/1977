@@ -13,6 +13,6 @@ Cada aula do curso foi transformado em uma branch. Assim, fica mais fácil encon
 
 ### Lista de Branches
 
-| Branch | Descrição |
-| ------ | --------- |
-|        |           |
+| Branch   | Descrição                                                 |
+| -------- | --------------------------------------------------------- |
+| aula-1-4 | Overview Identity - Criando Projeto no Visual Studio Code |
