@@ -9,5 +9,5 @@ insert_final_newline = false
 end_of_line = lf
 
 [*.md]
-max_line_lenght = false
+max_line_lenght = off
 trim_trailing_whitespace = false
