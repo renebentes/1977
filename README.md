@@ -9,10 +9,10 @@ Você pode acessar os originais em:
 
 ## Divisão do Código
 
-Cada aula do curso foi transformado em uma branch. Assim, fica mais fácil encontrar exemplo de código para um conteúdo específico de uma aula.
+Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo de código para um conteúdo específico de uma aula.
 
 ### Lista de Branches
 
 | Branch   | Descrição                                                 |
 | -------- | --------------------------------------------------------- |
-| aula-1-4 | Overview Identity - Criando Projeto no Visual Studio Code |
+| [aula-1-4](OverviewIdentity) | Overview Identity - Criando Projeto no Visual Studio Code |
