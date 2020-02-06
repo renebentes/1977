@@ -15,5 +15,5 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 
 | Branch   | Descrição                                                 |
 | -------- | --------------------------------------------------------- |
-| [aula-1-4](OverviewIdentity) | Overview Identity - Criando Projeto no Visual Studio Code |
-| [aula-1-5](Id.Overview.Mvc.Vstudio) | Overview Identity - Criando Projeto no Visual Studio |
+| [aula-1-4](278de57adea8c9aa9d6333d6068818e2cb519be7/OverviewIdentity) | Overview Identity - Criando Projeto no Visual Studio Code |
+| [aula-1-5](12902bc3030ffe516fef971af79de864dc946b27/Id.Overview.Mvc.Vstudio) | Overview Identity - Criando Projeto no Visual Studio |
