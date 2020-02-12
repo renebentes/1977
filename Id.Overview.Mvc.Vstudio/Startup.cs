@@ -78,6 +78,9 @@ namespace Id.Overview.Mvc.Vstudio
                 // options.Tokens.ChangePhoneNumberTokenProvider
                 // options.Tokens.EmailConfirmationTokenProvider
                 // options.Tokens.PasswordResetTokenProvider
+
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
