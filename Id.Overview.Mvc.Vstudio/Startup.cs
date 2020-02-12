@@ -70,6 +70,14 @@ namespace Id.Overview.Mvc.Vstudio
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = true;
                 options.Password.RequireNonAlphanumeric = true;
+
+                // Token
+                // options.Tokens.AuthenticatorIssuer
+                // options.Tokens.AuthenticatorTokenProvider
+                // options.Tokens.ChangeEmailTokenProvider
+                // options.Tokens.ChangePhoneNumberTokenProvider
+                // options.Tokens.EmailConfirmationTokenProvider
+                // options.Tokens.PasswordResetTokenProvider
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
