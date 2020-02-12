@@ -17,7 +17,7 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | -------- | --------------------------------------------------------- |
 | [aula-1-4](../../tree/278de57adea8c9aa9d6333d6068818e2cb519be7/OverviewIdentity) | Overview Identity - Criando Projeto no Visual Studio Code |
 | [aula-1-5](../../tree/12902bc3030ffe516fef971af79de864dc946b27/Id.Overview.Mvc.Vstudio) | Overview Identity - Criando Projeto no Visual Studio |
-| [aula-2-2](../../tree/df010a0732b2f8a3bb8db57436e11e58567daf6e/Id.Overview.Mvc.Vstudio) | Imersão - IdentityOptions: Lockout |
-| [aula-2-3](../../tree/c8843331c8e9d2080b4f6af39f8955895efb760e/Id.Overview.Mvc.Vstudio) | Imersão - IdentityOptions: Password |
-| [aula-2-4](../../tree/3c7d81af68246b011593d19914dd4438ab371847/Id.Overview.Mvc.Vstudio) | Imersão - IdentityOptions: SignIn |
+| [aula-2-2](Id.Overview.Mvc.Vstudio/Startup.cs#L64-66) | Imersão - IdentityOptions: Lockout |
+| [aula-2-3](Id.Overview.Mvc.Vstudio/Startup.cs#L67-72) | Imersão - IdentityOptions: Password |
+| [aula-2-4](Id.Overview.Mvc.Vstudio/Startup.cs#L61-63) | Imersão - IdentityOptions: SignIn |
 | [aula-2-5](Id.Overview.Mvc.Vstudio/Startup.cs#L74-80) | Imersão - IdentityOptions: Tokens |
