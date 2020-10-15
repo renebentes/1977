@@ -1,6 +1,7 @@
 using Id.Overview.Mvc.Vstudio.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -89,6 +90,32 @@ namespace Id.Overview.Mvc.Vstudio
                 options.User.RequireUniqueEmail = false;
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // Cookies
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                // options.ClaimsIssuer = "";
+                // options.Cookie.Domain = "";
+                // options.Cookie.Expiration = TimeSpan.MaxValue;
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Name = "AspNetCore.Cookies";
+                // options.Cookie.Path = "";
+                options.Cookie.SameSite = SameSiteMode.Lax;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+                // options.CookieManager =;
+                // options.DataProtectionProvider =;
+                // options.Events =;
+                // options.EventsType =;
+                options.ExpireTimeSpan = TimeSpan.FromDays(14);
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "Account/Logout";
+                options.ReturnUrlParameter = "ReturnUrl";
+                // options.SessionStore = ;
+                options.SlidingExpiration = true;
+                // options.TicketDataFormat = ;
+            });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

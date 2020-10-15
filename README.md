@@ -22,3 +22,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-4](Id.Overview.Mvc.Vstudio/Startup.cs#L61-L64)                                  | Imersão - IdentityOptions: SignIn                         |
 | [aula-2-5](Id.Overview.Mvc.Vstudio/Startup.cs#L79-L85)                                  | Imersão - IdentityOptions: Tokens                         |
 | [aula-2-6](Id.Overview.Mvc.Vstudio/Startup.cs#L87-L89)                                  | Imersão - IdentityOptions: User                           |
+| [aula-2-](Id.Overview.Mvc.Vstudio/Startup.cs#L94-L117)                                  | Imersão - IdentityOptions: Cookies                        |
