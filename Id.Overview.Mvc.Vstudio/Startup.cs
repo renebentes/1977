@@ -58,12 +58,17 @@ namespace Id.Overview.Mvc.Vstudio
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options =>
             {
+                // SingIn
                 options.SignIn.RequireConfirmedAccount = true;
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
+
+                // Lockout
                 options.Lockout.AllowedForNewUsers = true;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
                 options.Lockout.MaxFailedAccessAttempts = 5;
+
+                // Password
                 options.Password.RequireDigit = true;
                 options.Password.RequiredLength = 6;
                 options.Password.RequiredUniqueChars = 1;
@@ -79,6 +84,7 @@ namespace Id.Overview.Mvc.Vstudio
                 // options.Tokens.EmailConfirmationTokenProvider
                 // options.Tokens.PasswordResetTokenProvider
 
+                // User
                 options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
             })
