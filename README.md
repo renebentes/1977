@@ -24,3 +24,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-6](Id.Overview.Mvc.Vstudio/Startup.cs#L87-L89)                                  | Imersão - IdentityOptions: User                                               |
 | [aula-2-7](Id.Overview.Mvc.Vstudio/Startup.cs#L94-L117)                                 | Imersão - IdentityOptions: Cookies                                            |
 | [aula-2-9](../../commit/97570ad)                                                        | Imersão - Projeto Existente - Criando o projeto, packages e definindo classes |
+| [aula-2-10](../../commit/ec57665)                                                       | Imersão: Projeto Existente - Configurando o EntityFramework                   |
