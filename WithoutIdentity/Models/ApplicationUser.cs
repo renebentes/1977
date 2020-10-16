@@ -1,8 +1,9 @@
-using Microsoft.AspnetCore.Identity;
+using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace WithoutIdentity.Models
 {
-    public class Name : IdentityUser<Guid>
+    public class ApplicationUser : IdentityUser<Guid>
     {
 
     }

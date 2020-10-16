@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
+using System;
 using WithoutIdentity.Data;
+using WithoutIdentity.Models;
 
 namespace WithoutIdentity
 {
@@ -32,6 +29,10 @@ namespace WithoutIdentity
                 options.UseSqlServer(connection);
             });
 
+            services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
+                .AddEntityFrameworkStores<ApplicationDataContext>()
+                .AddDefaultTokenProviders();
+
             services.AddControllersWithViews();
         }
 
@@ -50,6 +51,8 @@ namespace WithoutIdentity
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseRouting();
 
