@@ -12,5 +12,6 @@ end_of_line = lf
 indent_size = 2
 
 [*.md]
-max_line_lenght = off
+indent_size = 1
+max_line_lenght = 80
 trim_trailing_whitespace = false
