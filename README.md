@@ -27,3 +27,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-10](../../commit/ec57665)                                                       | Imersão - Projeto Existente: Configurando o EntityFramework                  |
 | [aula-2-11](../../commit/3d3b6a4)                                                       | Imersão - Projeto Existente: Registrando o Identity e criando o banco        |
 | [aula-2-12](../../commit/d36b79f)                                                       | Imersão - Projeto Existente: Alterando as Configurações do Identity          |
+| [aula-2-13](../../commit/96deeb4)                                                       | Imersão - Projeto Existente: Criando o Registro do Usuário                   |
