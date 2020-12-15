@@ -1,9 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WithoutIdentity.Models
+namespace WithoutIdentity.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirmar Senha")]
+        [Compare(nameof(Password), ErrorMessage = "As senhas devem ser iguais")]
+        public string ConfirmPassword { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "E-mail")]
@@ -14,10 +19,5 @@ namespace WithoutIdentity.Models
         [Display(Name = "Senha")]
         [StringLength(100, ErrorMessage = "O campo {0} deve ter no mínimo {2} e no máximo {1} caracteres,", MinimumLength = 8)]
         public string Password { get; set; }
-
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirmar Senha")]
-        [Compare(nameof(Password), ErrorMessage = "As senhas devem ser iguais")]
-        public string ConfirmPassword { get; set; }
     }
 }
