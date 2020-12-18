@@ -3,12 +3,17 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-<ul class="nav navbar-nav navbar-right">
-    <li><a class="nav-link text-dark" href="#">@UserManager.GetUserName(User)</a></li>
-</ul> }
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link text-dark" href="#">@UserManager.GetUserName(User)</a></li>
+    </ul>
+    <form class="form-inline" id="logoutForm" method="post" asp-area="" asp-controller="Account" asp-action="Logout">
+        <button class="btn btn-outline-dark" type="submit">Sair</button>
+    </form>
+}
 else
 {
-<ul class="navbar-nav px-3">
-    <li><a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Registrar</a></li>
-    <li><a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
-</ul>}
+    <ul class="navbar-nav px-3">
+        <li><a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Registrar</a></li>
+        <li><a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+    </ul>
+}

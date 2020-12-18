@@ -1,8 +1,8 @@
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using WithoutIdentity.Models;
 using WithoutIdentity.Models.AccountViewModels;
 
@@ -50,6 +50,15 @@ namespace WithoutIdentity.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
         [HttpGet]
