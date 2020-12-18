@@ -1,0 +1,13 @@
+@model string
+
+@if(!string.IsNullOrWhiteSpace(Model))
+{
+    var statusMessageType = Model.StartsWith("Error") ?  "danger" :  "success";
+
+    <div class="alert alert-@statusMessageType alert-dismissible fade show" role="alert">
+        @Model
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+}
