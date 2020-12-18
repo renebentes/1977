@@ -30,3 +30,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-13](../../commit/96deeb4)                                                       | Imersão - Projeto Existente: Criando o Registro do Usuário                   |
 | [aula-2-14](../../commit/222b0e4)                                                       | Imersão - Projeto Existente: Criando o Login do Usuário                      |
 | [aula-2-15](../../commit/3acf9d2                                                        | Imersão - Projeto Existente: Criando o Logout do Usuário                     |
+| [aula-2-16](../../commit/08af8f9                                                        | Imersão - Projeto Existente: Criando a tela de edição de e-mail e telefone   |
