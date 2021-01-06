@@ -63,19 +63,26 @@ namespace ExternalProviders
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddAuthentication().AddFacebook(facebookOptions =>
-            {
-                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
-                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            services.AddAuthentication()
+                .AddFacebook(facebookOptions =>
+                {
+                    facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                    facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
 
-                // Obter dados por escopo - apenas após validação do app pelo Facebook
-                facebookOptions.Scope.Add("user_birthday");
+                    // Obter dados por escopo - apenas após validação do app pelo Facebook
+                    facebookOptions.Scope.Add("user_birthday");
 
-                // Obter locale usado pelo usuário
-                facebookOptions.ClaimActions.MapJsonKey(ClaimTypes.Locality, "locale");
+                    // Obter locale usado pelo usuário
+                    facebookOptions.ClaimActions.MapJsonKey(ClaimTypes.Locality, "locale");
 
-                facebookOptions.SaveTokens = true;
-            });
+                    facebookOptions.SaveTokens = true;
+                })
+                .AddGoogle(googleOptions =>
+                {
+                    googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+                    googleOptions.SaveTokens = true;
+                });
 
             services.AddControllersWithViews();
         }
