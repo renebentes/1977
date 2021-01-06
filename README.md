@@ -36,3 +36,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-19](../../commit/83d3eac                                                        | External Providers - Introdução                                              |
 | [aula-2-20](../../commit/dc8de37                                                        | External Providers - Facebook                                                |
 | [aula-2-21](../../commit/790ed4d                                                        | External Providers - Google                                                  |
+| [aula-2-22](../../commit/4bab751                                                        | External Providers - Twitter                                                 |
