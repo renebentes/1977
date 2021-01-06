@@ -32,3 +32,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-15](../../commit/3acf9d2                                                        | Imersão - Projeto Existente: Criando o Logout do Usuário                     |
 | [aula-2-16](../../commit/08af8f9                                                        | Imersão - Projeto Existente: Criando a tela de edição de e-mail e telefone   |
 | [aula-2-17](../../commit/37a4c26                                                        | Imersão - Projeto Existente: Criando o tela de alteração de senha            |
+| [aula-2-18](../../commit/e9d6d58                                                        | Imersão - Customizando nomes de tabelas e propriedades                       |
