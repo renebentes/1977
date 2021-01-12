@@ -92,6 +92,12 @@ namespace ExternalProviders
                     twitterOptions.RetrieveUserDetails = true;
 
                     twitterOptions.ClaimActions.MapJsonKey(ClaimTypes.Email, "email", ClaimValueTypes.Email);
+                })
+                .AddMicrosoftAccount(maOptions =>
+                {
+                    maOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+                    maOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+                    maOptions.SaveTokens = true;
                 });
 
             services.AddControllersWithViews();
