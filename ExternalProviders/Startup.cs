@@ -98,6 +98,12 @@ namespace ExternalProviders
                     maOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
                     maOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
                     maOptions.SaveTokens = true;
+                })
+                .AddLinkedIn(linkedInOptions =>
+                {
+                    linkedInOptions.ClientId = Configuration["Authentication:LinkedIn:ClientId"];
+                    linkedInOptions.ClientSecret = Configuration["Authentication:LinkedIn:ClientSecret"];
+                    linkedInOptions.SaveTokens = true;
                 });
 
             services.AddControllersWithViews();
