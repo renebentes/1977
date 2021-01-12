@@ -38,3 +38,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-21](../../commit/790ed4d                                                        | External Providers - Google                                                  |
 | [aula-2-22](../../commit/4bab751                                                        | External Providers - Twitter                                                 |
 | [aula-2-23](../../commit/ab74c12                                                        | External Providers - Microsoft Account                                       |
+| [aula-2-24](../../commit/4c024d6                                                        | External Providers - LinkedIn                                                |
