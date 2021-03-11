@@ -60,9 +60,6 @@ namespace ExternalProviders
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
             services.AddAuthentication();
             //     .AddFacebook(facebookOptions =>
             //     {
@@ -107,6 +104,7 @@ namespace ExternalProviders
             //     });
 
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
     }
 }
