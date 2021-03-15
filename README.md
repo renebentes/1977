@@ -40,3 +40,4 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-23](../../commit/ab74c12                                                        | External Providers - Microsoft Account                                       |
 | [aula-2-24](../../commit/4c024d6                                                        | External Providers - LinkedIn                                                |
 | [aula-2-25](../../commit/0ebd03a                                                        | Two Factor Authentication                                                    |
+| [aula-2-26](../../commit/a204c5d                                                        | Asp.Net Core Identity Com Dapper - Criando o Banco de Dados                  |
