@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Identity;
 
 namespace IdentityWithDapper.Data
 {
-    public class UserStore : IUserStore<ApplicationUser>, IUserEmailStore<ApplicationUser>
+    public class UserStore :
+        IUserStore<ApplicationUser>,
+        IUserEmailStore<ApplicationUser>,
+        IUserPhoneNumberStore<ApplicationUser>
     {
         private readonly string _connectionString;
 
@@ -120,6 +123,16 @@ namespace IdentityWithDapper.Data
             return Task.FromResult(user.NormalizedUserName);
         }
 
+        public Task<string> GetPhoneNumberAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.PhoneNumber);
+        }
+
+        public Task<bool> GetPhoneNumberConfirmedAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.PhoneNumberConfirmed);
+        }
+
         public Task<string> GetUserIdAsync(ApplicationUser user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.Id.ToString());
@@ -151,6 +164,18 @@ namespace IdentityWithDapper.Data
         public Task SetNormalizedUserNameAsync(ApplicationUser user, string normalizedName, CancellationToken cancellationToken)
         {
             user.NormalizedUserName = normalizedName;
+            return Task.FromResult(0);
+        }
+
+        public Task SetPhoneNumberAsync(ApplicationUser user, string phoneNumber, CancellationToken cancellationToken)
+        {
+            user.PhoneNumber = phoneNumber;
+            return Task.FromResult(0);
+        }
+
+        public Task SetPhoneNumberConfirmedAsync(ApplicationUser user, bool confirmed, CancellationToken cancellationToken)
+        {
+            user.PhoneNumberConfirmed = confirmed;
             return Task.FromResult(0);
         }
 
