@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace IdentityWithDapper.Data
 {
-    public class UserStore : IUserStore<ApplicationUser>
+    public class UserStore : IUserStore<ApplicationUser>, IUserEmailStore<ApplicationUser>
     {
         private readonly string _connectionString;
 
@@ -70,6 +70,16 @@ namespace IdentityWithDapper.Data
             // Nothing to dispose
         }
 
+        public async Task<ApplicationUser> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            using var connection = new SqlConnection(_connectionString);
+            await connection.OpenAsync(cancellationToken);
+            return await connection.QuerySingleOrDefaultAsync<ApplicationUser>($@"SELECT * FROM [ApplicationUser]
+                    WHERE [NormalizedEmail] = @{nameof(normalizedEmail)}", new { normalizedEmail });
+        }
+
         public async Task<ApplicationUser> FindByIdAsync(string userId, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -90,6 +100,21 @@ namespace IdentityWithDapper.Data
                     WHERE [NormalizedUserName] = @{nameof(normalizedUserName)}", new { normalizedUserName });
         }
 
+        public Task<string> GetEmailAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.Email);
+        }
+
+        public Task<bool> GetEmailConfirmedAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.EmailConfirmed);
+        }
+
+        public Task<string> GetNormalizedEmailAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.NormalizedEmail);
+        }
+
         public Task<string> GetNormalizedUserNameAsync(ApplicationUser user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.NormalizedUserName);
@@ -103,6 +128,24 @@ namespace IdentityWithDapper.Data
         public Task<string> GetUserNameAsync(ApplicationUser user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.UserName);
+        }
+
+        public Task SetEmailAsync(ApplicationUser user, string email, CancellationToken cancellationToken)
+        {
+            user.Email = email;
+            return Task.FromResult(0);
+        }
+
+        public Task SetEmailConfirmedAsync(ApplicationUser user, bool confirmed, CancellationToken cancellationToken)
+        {
+            user.EmailConfirmed = confirmed;
+            return Task.FromResult(0);
+        }
+
+        public Task SetNormalizedEmailAsync(ApplicationUser user, string normalizedEmail, CancellationToken cancellationToken)
+        {
+            user.NormalizedEmail = normalizedEmail;
+            return Task.FromResult(0);
         }
 
         public Task SetNormalizedUserNameAsync(ApplicationUser user, string normalizedName, CancellationToken cancellationToken)
