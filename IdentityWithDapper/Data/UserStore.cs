@@ -11,7 +11,8 @@ namespace IdentityWithDapper.Data
         IUserStore<ApplicationUser>,
         IUserEmailStore<ApplicationUser>,
         IUserPhoneNumberStore<ApplicationUser>,
-        IUserTwoFactorStore<ApplicationUser>
+        IUserTwoFactorStore<ApplicationUser>,
+        IUserPasswordStore<ApplicationUser>
     {
         private readonly string _connectionString;
 
@@ -124,6 +125,11 @@ namespace IdentityWithDapper.Data
             return Task.FromResult(user.NormalizedUserName);
         }
 
+        public Task<string> GetPasswordHashAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.PasswordHash);
+        }
+
         public Task<string> GetPhoneNumberAsync(ApplicationUser user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.PhoneNumber);
@@ -149,6 +155,11 @@ namespace IdentityWithDapper.Data
             return Task.FromResult(user.UserName);
         }
 
+        public Task<bool> HasPasswordAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.PasswordHash is not null);
+        }
+
         public Task SetEmailAsync(ApplicationUser user, string email, CancellationToken cancellationToken)
         {
             user.Email = email;
@@ -170,6 +181,12 @@ namespace IdentityWithDapper.Data
         public Task SetNormalizedUserNameAsync(ApplicationUser user, string normalizedName, CancellationToken cancellationToken)
         {
             user.NormalizedUserName = normalizedName;
+            return Task.FromResult(0);
+        }
+
+        public Task SetPasswordHashAsync(ApplicationUser user, string passwordHash, CancellationToken cancellationToken)
+        {
+            user.PasswordHash = passwordHash;
             return Task.FromResult(0);
         }
 
