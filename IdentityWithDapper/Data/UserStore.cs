@@ -10,7 +10,8 @@ namespace IdentityWithDapper.Data
     public class UserStore :
         IUserStore<ApplicationUser>,
         IUserEmailStore<ApplicationUser>,
-        IUserPhoneNumberStore<ApplicationUser>
+        IUserPhoneNumberStore<ApplicationUser>,
+        IUserTwoFactorStore<ApplicationUser>
     {
         private readonly string _connectionString;
 
@@ -133,6 +134,11 @@ namespace IdentityWithDapper.Data
             return Task.FromResult(user.PhoneNumberConfirmed);
         }
 
+        public Task<bool> GetTwoFactorEnabledAsync(ApplicationUser user, CancellationToken cancellationToken)
+        {
+            return Task.FromResult(user.TwoFactorEnabled);
+        }
+
         public Task<string> GetUserIdAsync(ApplicationUser user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.Id.ToString());
@@ -176,6 +182,12 @@ namespace IdentityWithDapper.Data
         public Task SetPhoneNumberConfirmedAsync(ApplicationUser user, bool confirmed, CancellationToken cancellationToken)
         {
             user.PhoneNumberConfirmed = confirmed;
+            return Task.FromResult(0);
+        }
+
+        public Task SetTwoFactorEnabledAsync(ApplicationUser user, bool enabled, CancellationToken cancellationToken)
+        {
+            user.TwoFactorEnabled = enabled;
             return Task.FromResult(0);
         }
 
