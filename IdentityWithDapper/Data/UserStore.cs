@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Identity;
 namespace IdentityWithDapper.Data
 {
     public class UserStore :
-        IUserStore<ApplicationUser>,
         IUserEmailStore<ApplicationUser>,
         IUserPhoneNumberStore<ApplicationUser>,
         IUserTwoFactorStore<ApplicationUser>,
