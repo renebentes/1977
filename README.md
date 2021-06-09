@@ -29,15 +29,15 @@ Para cada aula do curso há um link. Assim, fica mais fácil encontrar exemplo d
 | [aula-2-12](../../commit/d36b79f)                                                       | Imersão - Projeto Existente: Alterando as Configurações do Identity          |
 | [aula-2-13](../../commit/96deeb4)                                                       | Imersão - Projeto Existente: Criando o Registro do Usuário                   |
 | [aula-2-14](../../commit/222b0e4)                                                       | Imersão - Projeto Existente: Criando o Login do Usuário                      |
-| [aula-2-15](../../commit/3acf9d2                                                        | Imersão - Projeto Existente: Criando o Logout do Usuário                     |
-| [aula-2-16](../../commit/08af8f9                                                        | Imersão - Projeto Existente: Criando a tela de edição de e-mail e telefone   |
-| [aula-2-17](../../commit/37a4c26                                                        | Imersão - Projeto Existente: Criando o tela de alteração de senha            |
-| [aula-2-18](../../commit/e9d6d58                                                        | Imersão - Customizando nomes de tabelas e propriedades                       |
-| [aula-2-19](../../commit/83d3eac                                                        | External Providers - Introdução                                              |
-| [aula-2-20](../../commit/dc8de37                                                        | External Providers - Facebook                                                |
-| [aula-2-21](../../commit/790ed4d                                                        | External Providers - Google                                                  |
-| [aula-2-22](../../commit/4bab751                                                        | External Providers - Twitter                                                 |
-| [aula-2-23](../../commit/ab74c12                                                        | External Providers - Microsoft Account                                       |
-| [aula-2-24](../../commit/4c024d6                                                        | External Providers - LinkedIn                                                |
-| [aula-2-25](../../commit/0ebd03a                                                        | Two Factor Authentication                                                    |
-| [aula-2-26](../../commit/a204c5d                                                        | Asp.Net Core Identity Com Dapper - Criando o Banco de Dados                  |
+| [aula-2-15](../../commit/3acf9d2)                                                       | Imersão - Projeto Existente: Criando o Logout do Usuário                     |
+| [aula-2-16](../../commit/08af8f9)                                                       | Imersão - Projeto Existente: Criando a tela de edição de e-mail e telefone   |
+| [aula-2-17](../../commit/37a4c26)                                                       | Imersão - Projeto Existente: Criando o tela de alteração de senha            |
+| [aula-2-18](../../commit/e9d6d58)                                                       | Imersão - Customizando nomes de tabelas e propriedades                       |
+| [aula-2-19](../../commit/83d3eac)                                                       | External Providers - Introdução                                              |
+| [aula-2-20](../../commit/dc8de37)                                                       | External Providers - Facebook                                                |
+| [aula-2-21](../../commit/790ed4d)                                                       | External Providers - Google                                                  |
+| [aula-2-22](../../commit/4bab751)                                                       | External Providers - Twitter                                                 |
+| [aula-2-23](../../commit/ab74c12)                                                       | External Providers - Microsoft Account                                       |
+| [aula-2-24](../../commit/4c024d6)                                                       | External Providers - LinkedIn                                                |
+| [aula-2-25](../../commit/0ebd03a)                                                       | Two Factor Authentication                                                    |
+| [aula-2-26](../../commit/a204c5d)                                                       | Asp.Net Core Identity Com Dapper - Criando o Banco de Dados                  |
